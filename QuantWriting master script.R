@@ -8,8 +8,9 @@
         library(XLConnect)
         #Script files to source
         source("./R_Functions/load_4CExcelwb.R")
+        source("./R_Functions/digit_extraction.R")
  
-        load_4CExcelwb("4CAssignmentMaster.xlsx")
+        load_4CExcelwb("4CAssignmentMaster_extract_individual_digits.xlsx")
                
 #2) Analysis
         
