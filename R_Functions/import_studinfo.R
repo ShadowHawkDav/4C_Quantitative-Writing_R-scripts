@@ -1,28 +1,9 @@
-##############################################################################################
-###########################################
-#This script will read the stud.info worksheet from the Master Excel Data Sheet (MEDS).  It will then scan the CCCCdf to see what IDcodes are unique and add those as needed.  Finally, it will import all the student demographic info associated with the new IDcodes.  Each unique student not already in CCCCdf will be added as a new row.  Student demographic information that is already present will have values added that correspond to the new imported IDcodes.  If there is a unique piece of demographic data present in stud.info, then it will be added a a new column in CCCCdf with corresponding values for each student.  
-
-#To run this script, open it in the base directory of the Rstudio project folder.  You will also need to make sure the course_assignmentlist.txt is in the "supporting files" folder"
-
-#Make sure the MEDS is in the "Data" folder of the project
-
-###########################################
-##############################################################################################
-
-#inputs, 1) name of Master Excel Data sheet (MEDS)
-
-
-import.studinfo <- function(filename, directory = "Data"){
-        
-        
-        ##### This section reads the CCCdf dataframe that was previously saved as an RData object to the disk.  It is loaded into the current object environment and stored as the object CCCCdf.  This will overwrite the CCCCdf created in the previous command.        
-
-       #CCCCdf <- readRDS("./Data/CCCCdf.Rdata") 
+import.studinfo <- function(file, sheet, directory = "Data"){
         
         
         ##### This sections opens the Excel workbook specified in the function arguments and reads the stud.info worksheet into a new dataframe called stud.info.  Finally it sorts stud.info based on IDcode 
-        wb <- loadWorkbook(paste(directory,"/",filename,sep=""))  
-        stud.info <- readWorksheet(wb,"stud.info")
+        wb <- loadWorkbook(paste("./",directory,"/",file,sep=""))  
+        stud.info <- readWorksheet(wb,sheet)
         stud.info <- stud.info[order(stud.info$IDcode),]
         stud.info.colnames <-colnames(stud.info)
         

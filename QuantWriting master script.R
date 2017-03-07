@@ -1,36 +1,10 @@
 #Master 4C Coding analysis and workflow functions
 
-#############################################################################
-#Feature to add:
-
-#1) notes section before each script block that explains function and defines function arguments
-
-#2) Use defined list of assignments to rename columns in camino download to be in shortened standardized naming and appended with year 
-
-#3) GUI interface with web-based delivery(shiny)
-
-
-
-#############################################################################
-
-
-#########   Analysis Workflow  #########
-
-#1) Workspace preparation.  Run the commands below to download and install the necessary R packages of the 4C analysis.  Note: Make sure Java RunTime Environment is installed before continuning
-        #init configuration
-        install.packages("Jmisc")
-        library(Jmisc)
-         #Source all scripts files in R_functions directory
-        sourceAll("./R_Functions")
-
-        #Load necessary packages
-        package.load()
-     
         #Use this command to create a blank CCCCdf (be very careful with using it)
         ###### DO NOT RUN THESE COMMANDs UNLESS YOU ARE CETAIN #######
         CCCCdf <- data.frame(IDcode=character())
         #saveRDS(CCCCdf,"./Data/CCCCdf.RData")   
-        #CCCCdf<-readRDS("./Data/CCCCdf.RData")
+        CCCCdf<-readRDS("./Data/CCCCdf.RData")
        
         
 #2) Data Import
@@ -41,7 +15,11 @@
         
         #Instructions - Change the XXX below to match the name of the excel file where the student data is located (don't remove the quotes).  The default folder for the data file is /Data.  Use directory="XXX" as an additional argument if the data is located in a different folder.
 
-        import.studinfo("test3.xlsx", directory = "./Data/testfiles") 
+        #General format import.studinfo("filename","sheetname") 
+        
+        
+        
+        import.studinfo("importTest.xlsx","stud.info16",directory="./Data/testfiles") 
         
 
 ########################### CAMINO data Import ##########################
@@ -53,11 +31,14 @@
         #worksheet - name of the directory in the file that contains the properly formatted student data downloaded from CAMINO.
         #directory - the name of the directory where the file is located.  Default is "Data".  No need to specify the directory if you are using the default.  Otherwise, use directory="XXXX"  
         
-        import.camino("test3.xlsx","assign.camino17", directory = "./Data/testfiles") 
+        import.camino("4C_MEDS.xlsx","camino_w16",directory="./Data/testfiles") 
+        
+        
+        assign_rename()
         
         
         
-        import.4C("test2.xlsx","assign.eklab16")
+        import.4C("test2.xlsx","assign.eklab16",directory = "./Data/testfiles")
         import.4C("test3.xlsx","assign.eklab17", directory = "./Data/testfiles")
         import.4C("test3.xlsx","assign.trlab17", directory = "./Data/testfiles")
         
