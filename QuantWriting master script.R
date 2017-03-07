@@ -31,14 +31,14 @@
         #worksheet - name of the directory in the file that contains the properly formatted student data downloaded from CAMINO.
         #directory - the name of the directory where the file is located.  Default is "Data".  No need to specify the directory if you are using the default.  Otherwise, use directory="XXXX"  
         
-        import.camino("4C_MEDS.xlsx","camino_w16",directory="./Data/testfiles") 
+        import.camino("importTest.xlsx","assign.camino16",directory="./Data/testfiles") 
         
         
         assign_rename()
         
         
         
-        import.4C("test2.xlsx","assign.eklab16",directory = "./Data/testfiles")
+        import.4C("importTest.xlsx","assign.eklab16",directory = "./Data/testfiles")
         import.4C("test3.xlsx","assign.eklab17", directory = "./Data/testfiles")
         import.4C("test3.xlsx","assign.trlab17", directory = "./Data/testfiles")
         
