@@ -1,0 +1,18 @@
+%+%                     Concatenate two strings
+JBTest                  p Value of Jarque Bera test
+addCol                  Add a constant column to a data.frame or matrix
+demean                  Demean a vector or a matrix (by column)
+evalFunctionOnList      Evaluate Function Under Local Variables
+generateSignificance    Generate t-statistics, p-value and significance
+label_both_parsed_recode
+                        Combine label_both and label_parsed in
+                        'ggplot2'.
+oapply                  Outer apply
+packages                load packages with auto-installation
+recode                  Recode the value of a vector
+repCol                  Repeat a vector by col
+repRow                  Repeat a vector by row
+shift                   shift a vector by 'shift_by' unit
+sourceAll               Source all the R files of a directory
+splitBy                 Split a vector by a sequence of length
+tic                     Start Stop clock to measure performance
