@@ -6,6 +6,7 @@ import.4C <- function(filename, worksheet, directory = "Data"){
         ##This section reads the specified 4C worksheet into a local data frame called "sheet." It pads the "score" column of sheet with leading 0's to the left (up to a width of 4) and then orders the rows of sheet by student IDcode. 
         wb <- loadWorkbook(paste(directory,"/",filename,sep="")) 
         sheet <- readWorksheet(wb, worksheet) 
+        sheet <- na.omit(sheet)
         sheet$score <- sprintf("%04d", sheet$score)
         sheet <- sheet[order(sheet$IDcode),]
         

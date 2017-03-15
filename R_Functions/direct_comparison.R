@@ -18,12 +18,11 @@ direct_comparison <- function(col1, col2, df = CCCCdf, xlab = a, ylab = b){
         ##gray space represents 95% confidence interval 
         scatter <<- regression_line(scatter)
         
-        ##p-value
-        ##p <<- scatter$coefficients[2,4]
-        
         ##save graph to "Analyses and Outputs" folder
-        plot(scatter)
-        dev.off()
+        ##plot(scatter)
+        ##dev.off()
+        
+        rmarkdown::render("direct_comparison.R", "pdf_document")
         
         ##returns scatter plot
         scatter

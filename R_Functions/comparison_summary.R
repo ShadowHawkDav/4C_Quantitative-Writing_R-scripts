@@ -1,7 +1,7 @@
 ##col1, col2 must be numerics corresponding to the column numbers of the 2 columns to be compared
 ##lab1 and lab2 must be strings
 ##directory needed to save RDS to local file
-direct_comparison <- function(col1, col2, df = CCCCdf, lab1 = a, lab2 = b, directory = "./4C_Writing-Analysis-in-R"){
+comparison_summary <- function(col1, col2, df = CCCCdf, lab1 = a, lab2 = b, directory = "./4C_Writing-Analysis-in-R"){
         
         ##row names of comparison chart default to column names of df if custom names are omitted
         a <- colnames(df)[col1]
