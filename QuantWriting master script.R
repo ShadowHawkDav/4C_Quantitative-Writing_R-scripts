@@ -41,7 +41,7 @@
         
         #Instructions - Change the XXX below to match the name of the excel file where the student data is located (don't remove the quotes).  The default folder for the data file is /Data.  Use directory="XXX" as an additional argument if the data is located in a different folder.
 
-        import.studinfo("test3.xlsx", directory = "./Data/testfiles") 
+        import.studinfo("4C_Master.xlsx", "studinfo_w17", directory = "./Data") 
         
 
 ########################### CAMINO data Import ##########################
@@ -53,15 +53,9 @@
         #worksheet - name of the directory in the file that contains the properly formatted student data downloaded from CAMINO.
         #directory - the name of the directory where the file is located.  Default is "Data".  No need to specify the directory if you are using the default.  Otherwise, use directory="XXXX"  
         
-        import.camino("test3.xlsx","assign.camino17", directory = "./Data/testfiles") 
+        import.camino("4C_Master.xlsx","camino_w16", directory = "./Data") 
         
-        
-        
-        import.4C("test2.xlsx","assign.eklab16")
-        import.4C("test3.xlsx","assign.eklab17", directory = "./Data/testfiles")
-        import.4C("test3.xlsx","assign.trlab17", directory = "./Data/testfiles")
-        
-        import.4C("4C_pretests_17.xlsx", "pretest", directory = "./Data")
+        import.4C("4C_Master.xlsx", "pretest_w17", directory = "./Data")
         
                 
 #2) Analysis
