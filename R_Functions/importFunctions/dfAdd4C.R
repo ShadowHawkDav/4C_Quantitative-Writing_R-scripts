@@ -44,7 +44,7 @@ would you like use a different column to label the rows of the 4C data matrix?\n
         
 #SECTION 4: This section binds the two parallel lists (uniqueIDS and cccclist) into a dataframe named "df" with column names of "IDcode" and the specified worksheet name, respectively.  It also add a c_ to signify that the columns are from a 4C dataset
         addFrame <- as.data.frame(cbind(uniqueIDs, cccclist))
-        colnames(addFrame) <- c("IDcode", paste0("c_",importlist[sheetindex,1]))
+        colnames(addFrame) <- c("IDcode", paste0("b_",importlist[sheetindex,1]))
         addFrame$IDcode<-as.character(addFrame$IDcode)        
         
         ##### This section merges the df data frame with the frameName datafame.  The all=TRUE argument specifies that all values will be kept even if they do not appear in both dataframes.
@@ -53,4 +53,6 @@ would you like use a different column to label the rows of the 4C data matrix?\n
              
         
         assign("masterFrame", newFrame, envir=data.env)
+
+        readline(prompt = paste0(names(xlsData.FrameList[sheetindex])," has been successfully added to your data frame\n"))        
 }

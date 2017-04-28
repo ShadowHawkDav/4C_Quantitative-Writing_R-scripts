@@ -1,4 +1,12 @@
-dfCreate<-function(frameName = "CCCCdf") {
+dfCreate<-function() {
+        cat("\014")
+        message("-The dfCreate function will allow you to add data imported from an Excel worksheet into a an existing or newly created data frame.\n
+-Please specify the name of the data frame you want to create / modify.\n
+-If the name you specify does not already exist, a new data frame with that name will be created. If no name is specified, CCCCdf will be used as the default data frame name.")
+        makeframe<-readline("Do you want to specify a frame name other than CCCCdf?")
+        if(makeframe=="y"){frameName<-readline("What is the name of the data frame you want to create/modify?")
+        } else {frameName<-"CCCCdf"}
+        
         data.env<-new.env()
         variable.env<-new.env()
         source("./R_Functions/importFunctions/dfAdd4C.R",local=TRUE)
@@ -11,13 +19,7 @@ dfCreate<-function(frameName = "CCCCdf") {
         assign("frameName",frameName,envir = variable.env)
         assign("masterFrame",masterFrame,envir=data.env)
         
-        cat("\014")
-        message("The dfCreate function will allow you to add data imported from an Excel worksheet into a an existing or newly created data frame. 
-\n
-The argument specified for this function is the name of the dataframe you want to create/expand.  You will encounter an error if you specificy the name of an object that is not a data frame. 
-\n
-If the name you specify does not already exist, a new data frame will be created.  A dataframe called CCCCdf will be created if no dataframe name was specified when you ran the funtion")
-        readline("(press enter to continue)")
+        
 
         loop<-"yesloop"
                 while(loop=="yesloop"){

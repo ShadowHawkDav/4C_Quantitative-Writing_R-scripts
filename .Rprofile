@@ -1,10 +1,17 @@
 ## Step 1 - Check for required packages and install them in the user's library if necessary
 
+
+#googlesheets
+#if(!require(googlesheets)){install.packages("googlesheets")}
+
+#magrittr
+#if(!require(magrittr)){install.packages("magrittr")} 
+
 #NCmisc
 if(!require(NCmisc)){install.packages("NCmisc")} 
 
 #httr
-if(!require(httr)){install.packages("httr")} 
+#if(!require(httr)){install.packages("httr")} 
 
 #gtools
 if(!require(gtools)){install.packages("gtools")} 
@@ -42,6 +49,8 @@ if(!require(dplyr)){install.packages("dplyr")}
 
 sourceAll("./R_Functions/mainFunctions")
 options(stringsAsFactors = FALSE)
-cat("\014")
-message("
-Welcome to the 4C quantitative writing analysis package.  You can use the tools contained withing this package to collect, clean, and analyze student quantitative writing using 4C scores.")
+#cat("\014")
+
+
+message("Welcome to the 4C quantitative writing analysis package.  You can use the tools contained withing this package to collect, clean, and analyze student quantitative writing using 4C scores.")
+

@@ -82,8 +82,8 @@ xlsImport<-function(){
         
         
 cat("\014")        
-assign("xlsData.FrameList", xlsData.FrameList, envir=globalenv())
-assign("importResults.frame", importResults.frame, envir=globalenv())
+assign("xlsData.FrameList", xlsData.FrameList, envir=.GlobalEnv)
+assign("importResults.frame", importResults.frame, envir=.GlobalEnv)
 print(importResults.frame)
 x <- readline("See the list above for import results!\n(press enter to continue)")
 
