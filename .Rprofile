@@ -3,7 +3,7 @@
 
 
 #googlesheets
-if(!require(googlesheets)){install.packages("googlesheets")}
+#if(!require(googlesheets)){install.packages("googlesheets")}
 
 #magrittr
 #if(!require(magrittr)){install.packages("magrittr")}
