@@ -1,0 +1,31 @@
+---
+title: "Overview of Main Functions"
+author: "David McMillan"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_knit$set(root.dir = '..')
+```
+
+## Only some of the function for the project will be visible in the user environment when RStudio is started
+
+*This reduces the number of objects that are visible to the user to reduce clutter.*
+*The functions in this list will be ones that are key to starting or finishing an analysis (data import, df loading, df saving, etc)*
+
+####The current list of functions that are available are:
+
+```{r eval=TRUE}
+library(Jmisc)
+sourceAll("./R_Functions/mainFunctions")
+#cat(list.files("./R_Functions/mainFunctions"),sep="\n")
+```
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+
