@@ -1,4 +1,4 @@
-#df contains one column of a continuous variable and one column of a factor 
+#df contains one column of a continuous variable and one column of a factor
 anova <- function(df){
-        aov(scores ~ statement, data = df)
+        aov(scores ~ complexity, data = df)
 }

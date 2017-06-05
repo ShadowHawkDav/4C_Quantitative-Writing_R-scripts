@@ -1,5 +1,5 @@
-#df contains one column of a continuous variable and one column of a factor 
+#df contains one column of a continuous variable and one column of a factor
 boxPlot <- function(df){
-        df$statement = factor(df$statement,c("one","two","three"))
-        plot(scores ~ statement, data = df)
+        df$complexity = factor(df$complexity,c("two","three","six"))
+        plot(scores ~ complexity, data = df)
 }
