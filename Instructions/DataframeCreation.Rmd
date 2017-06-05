@@ -1,0 +1,69 @@
+---
+title: "Effect of statement complexity on mean 4C using ANOVA and Regression"
+author: "David McMillan"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: html_document
+---
+
+```{r setup, echo=FALSE, cache=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = '..')
+setwd("..")
+options(width = 250)
+load("C:/Users/David McMillan/Google Drive/PROJECTS/4C_QuantWritingAnalysis-in-R_featuredevelopment/Misc/instructionWorkspaces/instructions.RData")
+```
+
+This document will step through the process of creating a dataframe from the imported Master Excel Data Sheets (MEDS).  The created dataframe can then be used for subsequent analyses and testing hypotheses.
+
+The process of creating the data frame break down to the following steps:
+
+1. Opening the MEDS excel file and importing data.
+2. Selecting a worksheet to form basis of dataframe
+3. Adding additional columns of data from other worhsheets.
+4. Saving data frame to disk to be used for analysis later.
+
+
+
+1. The initial step to creating the dataframe consists of importing the MEDS file.  The import process is started with the following command:
+
+
+This function creates 2 object in the R Environemnt, shown below:
+
+A) importResults.frame, a dataframe containing a list of all the worksheets imported from excel.
+```{r importResults.frame,eval=TRUE}
+print(head(importResults.frame))
+```
+B) xlsData.FrameList, a list object with each element in the list containing a dataframe created from a single imported excel worksheet.
+```{r, echo=FALSE}
+getwd()
+ls()
+class(xlsData.FrameList)
+names(xlsData.FrameList)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).

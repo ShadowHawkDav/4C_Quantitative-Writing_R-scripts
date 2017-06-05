@@ -1,0 +1,64 @@
+---
+title: "Managing Student information"
+author: "David McMillan"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Student IDCodes are used to cleanse personally identifiable information from project data.
+
+####Looking forward, one of the best ways to expand the scope of htis project is to share these analysis techniques with other educators to use in their classroom.
+
+*The benefits of sharing these tools and techniques inclue:*
+
+- Growing our database with the addition of student performance data from other instructors, disciplines, and schools
+- Allow other instructors to ask their own questions about studnet learning using data from their classrooms.
+
+*However, paramount to this process is the ability to remove personally identifiable information from project files before they are shared with other instructors.*
+
+*Beacause of this, the student IDCode database will allow us to remove student names while still maintaing a link to original data sources to maintain data integrity.*
+
+
+
+## Format structure of IDCode
+- *The IDcode consists of six alphnumeric digits that help to identify key aspects of the course while also maintaining a random element to protect student identiy.*
+
+- *The IDcode will also be used to serve as a unique identifier to link data stored in different data tables / data frames*
+
+*- Finally, the IDcode has been designed to allow for other data sources besides student information should the need arise.*
+
+IDCode Digit position | Meaning
+------ | ------------------------------------------------
+1 | Data source (A= Student, 2= publication)
+2 | Course ID (A= Bio25, see Course ID table for more) 
+3 | Course Year (A= 2015, B= 2016, C= 2017, etc)
+4 - 6| *3 digit number number randomly assigned to students within a single class.*  
+
+## Cleansing data sources - Part 1
+
+The process of cleansing data sources consists of:
+
+1. Split student names into first and last names and sort by random number
+2. Generating new random IDCode for each student in a class
+3. Copying IdCode to new data source and visually verify 
+4. Deleting student names from data source
+
+## Step 1 - Split student names into first and last name columns.
+
+![](IDcode files/images/slide2.png)
+
+## Step 2 - Generate new random IDCodes for each student.
+
+![](IDcode files/images/slide3.png)
+
+## Step 3 and 4 - Copy ID Codes back to data source, inspect, and delete extra columns.
+
+![](IDcode files/images/slide4.png)
+
+
+## Generating IDCode - Video Tutorial
+

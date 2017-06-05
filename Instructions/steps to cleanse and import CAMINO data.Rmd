@@ -1,0 +1,51 @@
+---
+title: "Steps to cleanse CAMINO data and import to MEDS"
+author: "David McMillan"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Basic steps to cleanse and import CAMINO data to Master Excel Data sheet (MEDS)
+
+1. Downlad class grads from CAMINO and open in Excel
+
+
+2. Save a copy of the grade sheet so the originally is not acidentally overwritten
+
+
+3. If some of the assignments were muted at the time of download, the second row of the worksheet will reflect that.  If that is the case, delete the entire 2nd row.
+
+
+4. Cell A1 shoud now read "Name" and Cell B1 should read "Points Possible"
+
+
+5. Delete the columns for:
+        + ID
+        + SIS User ID
+        + SIS login ID
+        + Section
+
+
+6. Insert 4-5 blank columns between student names and assignment columns
+
+
+7. Copy student first name, last name and IDcode from "Student ID Master.xlsx"
+
+
+8. Sort the new copied columns by last name, first name so students appear in alphabetically order
+
+
+9. Scroll down list of student name to visually confirm that the student name download from CAMINO aligns with the first name and last name column copied from the "Student ID master.xlsx"
+
+
+10. If the names align, delete columns with student names and delete any empty columns between student IDcode and assignment columns.
+
+
+11. Highlight all rows and columns with student info and copy to new worksheet in the Master excel data sheets file.
+
+
+12. Finished.

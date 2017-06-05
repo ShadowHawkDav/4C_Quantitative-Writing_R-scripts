@@ -1,0 +1,19 @@
+---
+title: "Effect of statement complexity on mean 4C using ANOVA and Regression"
+author: "David McMillan"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: html_notebook
+---
+
+This analysis will examine the effect of statement complex on mean for 4 Score for a single factor using both ANOVA and regression.  
+Overview statement
+tests being performed
+variables being used.
+
+
+1. method of building the analysis dataframe.
+        - picture of structure of data frame to show example.
+2. Name of analysis dataframe saved to the disk.
+3. mean 4c by complexity (pre and post test) (ANOVA and regression)
+4. mean 4c by gender (pre and post) (ANOVA and regression)
+5. mean 4c by complexity and gender (2 way anova)
