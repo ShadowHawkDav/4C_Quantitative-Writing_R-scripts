@@ -1,2 +1,0 @@
-bakcground color = 
-regression = y

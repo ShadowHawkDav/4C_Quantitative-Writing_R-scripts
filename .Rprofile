@@ -1,18 +1,21 @@
+options(repos=structure(c(CRAN="https://cran.cnr.berkeley.edu/")))
+
+
 ## Step 1 - Check for required packages and install them in the user's library if necessary
 
 
 
 #googlesheets
-#if(!require(googlesheets)){install.packages("googlesheets")}
+if(!require(googlesheets)){install.packages("googlesheets")}
 
 #magrittr
-#if(!require(magrittr)){install.packages("magrittr")}
+if(!require(magrittr)){install.packages("magrittr")}
 
 #NCmisc
 if(!require(NCmisc)){install.packages("NCmisc")}
 
 #httr
-#if(!require(httr)){install.packages("httr")}
+if(!require(httr)){install.packages("httr")}
 
 #gtools
 if(!require(gtools)){install.packages("gtools")}
@@ -49,7 +52,7 @@ if(!require(ggplot)){install.packages("googlesheets")}
 
 
 #################################################################################
-sourceAll("./R_Functions/mainFunctions")
+sourceAll("./R_Functions/baseFunctions")
 options(stringsAsFactors = FALSE)
 
 #cat("\014")
